@@ -23,7 +23,7 @@
         randomKernel[i] = ~~(Math.random()*256);
     }
 
-    c.style.cssText = "position: absolute; left: 0; top: 0";
+    c.style.cssText = "position:absolute;left:0;top:0";
     var w = c.width = window.innerWidth,
         h = c.height = window.innerHeight,
         img = a.createImageData(w, h),
@@ -57,28 +57,58 @@
                     var pixDeltaFromOriginY = yin-pixOriginY;
                     var pixDeltaFromOriginZ = zin-pixOriginZ;
 
-                    var triangleFactorA, triangleFactorB;
+                    var triangleFactorAX,
+                        triangleFactorAY,
+                        triangleFactorAZ,
+                        triangleFactorBX,
+                        triangleFactorBY,
+                        triangleFactorBZ;
+
                     if (pixDeltaFromOriginX>=pixDeltaFromOriginY) {
                         if (pixDeltaFromOriginY>=pixDeltaFromOriginZ) {
-                            triangleFactorA = [1,0,0];
-                            triangleFactorB = [1,1,0];
+                            triangleFactorAX = 1;
+                            triangleFactorAY = 0;
+                            triangleFactorAZ = 0;
+                            triangleFactorBX = 1;
+                            triangleFactorBY = 1;
+                            triangleFactorBZ = 0;
                         } else if (pixDeltaFromOriginX>=pixDeltaFromOriginZ) {
-                            triangleFactorA = [1,0,0];
-                            triangleFactorB = [1,0,1];
+                            triangleFactorAX = 1;
+                            triangleFactorAY = 0;
+                            triangleFactorAZ = 0;
+                            triangleFactorBX = 1;
+                            triangleFactorBY = 0;
+                            triangleFactorBZ = 1;
                         } else {
-                            triangleFactorA = [0,0,1];
-                            triangleFactorB = [1,0,1];
+                            triangleFactorAX = 0;
+                            triangleFactorAY = 0;
+                            triangleFactorAZ = 1;
+                            triangleFactorBX = 1;
+                            triangleFactorBY = 0;
+                            triangleFactorBZ = 1;
                         }
                     } else {
                         if (pixDeltaFromOriginY<pixDeltaFromOriginZ) {
-                            triangleFactorA = [0,0,1];
-                            triangleFactorB = [0,1,1];
+                            triangleFactorAX = 0;
+                            triangleFactorAY = 0;
+                            triangleFactorAZ = 1;
+                            triangleFactorBX = 0;
+                            triangleFactorBY = 1;
+                            triangleFactorBZ = 1;
                         } else if (pixDeltaFromOriginX<pixDeltaFromOriginZ) {
-                            triangleFactorA = [0,1,0];
-                            triangleFactorB = [0,1,1];
+                            triangleFactorAX = 0;
+                            triangleFactorAY = 1;
+                            triangleFactorAZ = 0;
+                            triangleFactorBX = 0;
+                            triangleFactorBY = 1;
+                            triangleFactorBZ = 1;
                         } else {
-                            triangleFactorA = [0,1,0];
-                            triangleFactorB = [1,1,0];
+                            triangleFactorAX = 0;
+                            triangleFactorAY = 1;
+                            triangleFactorAZ = 0;
+                            triangleFactorBX = 1;
+                            triangleFactorBY = 1;
+                            triangleFactorBZ = 0;
                         }
                     }
 
@@ -100,16 +130,16 @@
                     , GRADIENTS_3D[randomKernel[ii+randomKernel[jj+randomKernel[kk]]] % 12]);
 
                     totalMagnitude += calculateEffect3D(
-                        pixDeltaFromOriginX - triangleFactorA[0] - SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOriginY - triangleFactorA[1] - SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOriginZ - triangleFactorA[2] - SKEW_GRID_TO_PIXEL_3D
-                    , GRADIENTS_3D[randomKernel[ii+triangleFactorA[0]+randomKernel[jj+triangleFactorA[1]+randomKernel[kk+triangleFactorA[2]]]] % 12]);
+                        pixDeltaFromOriginX - triangleFactorAX - SKEW_GRID_TO_PIXEL_3D,
+                        pixDeltaFromOriginY - triangleFactorAY - SKEW_GRID_TO_PIXEL_3D,
+                        pixDeltaFromOriginZ - triangleFactorAZ - SKEW_GRID_TO_PIXEL_3D
+                    , GRADIENTS_3D[randomKernel[ii+triangleFactorAX+randomKernel[jj+triangleFactorAY+randomKernel[kk+triangleFactorAZ]]] % 12]);
 
                     totalMagnitude += calculateEffect3D(
-                        pixDeltaFromOriginX - triangleFactorB[0] - 2.0*SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOriginY - triangleFactorB[1] - 2.0*SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOriginZ - triangleFactorB[2] - 2.0*SKEW_GRID_TO_PIXEL_3D
-                    , GRADIENTS_3D[randomKernel[ii+triangleFactorB[0]+randomKernel[jj+triangleFactorB[1]+randomKernel[kk+triangleFactorB[2]]]] % 12]);
+                        pixDeltaFromOriginX - triangleFactorBX - 2.0*SKEW_GRID_TO_PIXEL_3D,
+                        pixDeltaFromOriginY - triangleFactorBY - 2.0*SKEW_GRID_TO_PIXEL_3D,
+                        pixDeltaFromOriginZ - triangleFactorBZ - 2.0*SKEW_GRID_TO_PIXEL_3D
+                    , GRADIENTS_3D[randomKernel[ii+triangleFactorBX+randomKernel[jj+triangleFactorBY+randomKernel[kk+triangleFactorBZ]]] % 12]);
 
                     totalMagnitude += calculateEffect3D(
                         pixDeltaFromOriginX - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D,

@@ -26,7 +26,7 @@
       <file leaf-file-name="js1k.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js1k.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="54" selection-start="1836" selection-end="1836" vertical-scroll-proportion="-0.29411766">
+            <state line="10" column="32" selection-start="361" selection-end="361" vertical-scroll-proportion="0.23400936">
               <folding />
             </state>
           </provider>
@@ -44,12 +44,12 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="0" selection-start="5713" selection-end="5713" vertical-scroll-proportion="-78.125">
+            <state line="162" column="0" selection-start="7024" selection-end="7024" vertical-scroll-proportion="-78.125">
               <folding>
-                <marker date="1330469283000" expanded="true" signature="456:701" placeholder="{...}" />
-                <marker date="1330469283000" expanded="true" signature="600:656" placeholder="{...}" />
-                <marker date="1330469283000" expanded="true" signature="966:4742" placeholder="{...}" />
-                <marker date="1330469283000" expanded="true" signature="5400:5474" placeholder="{...}" />
+                <marker date="1330469568000" expanded="true" signature="456:701" placeholder="{...}" />
+                <marker date="1330469568000" expanded="true" signature="600:656" placeholder="{...}" />
+                <marker date="1330469568000" expanded="true" signature="2126:6061" placeholder="{...}" />
+                <marker date="1330469568000" expanded="true" signature="6711:6785" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -279,12 +279,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="0" selection-start="5713" selection-end="5713" vertical-scroll-proportion="-78.125">
+        <state line="162" column="0" selection-start="7024" selection-end="7024" vertical-scroll-proportion="-78.125">
           <folding>
-            <marker date="1330469283000" expanded="true" signature="456:701" placeholder="{...}" />
-            <marker date="1330469283000" expanded="true" signature="600:656" placeholder="{...}" />
-            <marker date="1330469283000" expanded="true" signature="966:4742" placeholder="{...}" />
-            <marker date="1330469283000" expanded="true" signature="5400:5474" placeholder="{...}" />
+            <marker date="1330469568000" expanded="true" signature="456:701" placeholder="{...}" />
+            <marker date="1330469568000" expanded="true" signature="600:656" placeholder="{...}" />
+            <marker date="1330469568000" expanded="true" signature="2126:6061" placeholder="{...}" />
+            <marker date="1330469568000" expanded="true" signature="6711:6785" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -298,7 +298,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js1k.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="54" selection-start="1836" selection-end="1836" vertical-scroll-proportion="-0.29411766">
+        <state line="10" column="32" selection-start="361" selection-end="361" vertical-scroll-proportion="0.23400936">
           <folding />
         </state>
       </provider>
