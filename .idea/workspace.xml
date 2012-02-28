@@ -26,7 +26,7 @@
       <file leaf-file-name="js1k.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js1k.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="41" selection-start="3859" selection-end="3859" vertical-scroll-proportion="0.50980395">
+            <state line="73" column="53" selection-start="3038" selection-end="3038" vertical-scroll-proportion="0.18096724">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="out.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/out.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="143" selection-start="143" selection-end="143" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -44,11 +44,12 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="0" selection-start="5577" selection-end="5577" vertical-scroll-proportion="-78.125">
+            <state line="128" column="0" selection-start="5628" selection-end="5628" vertical-scroll-proportion="-78.125">
               <folding>
-                <marker date="1330468452000" expanded="true" signature="718:848" placeholder="{...}" />
-                <marker date="1330468452000" expanded="true" signature="1190:4590" placeholder="{...}" />
-                <marker date="1330468452000" expanded="true" signature="5276:5350" placeholder="{...}" />
+                <marker date="1330469043000" expanded="true" signature="456:701" placeholder="{...}" />
+                <marker date="1330469043000" expanded="true" signature="600:656" placeholder="{...}" />
+                <marker date="1330469043000" expanded="true" signature="890:4654" placeholder="{...}" />
+                <marker date="1330469043000" expanded="true" signature="5315:5389" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -278,25 +279,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="0" selection-start="5577" selection-end="5577" vertical-scroll-proportion="-78.125">
+        <state line="128" column="0" selection-start="5628" selection-end="5628" vertical-scroll-proportion="-78.125">
           <folding>
-            <marker date="1330468452000" expanded="true" signature="718:848" placeholder="{...}" />
-            <marker date="1330468452000" expanded="true" signature="1190:4590" placeholder="{...}" />
-            <marker date="1330468452000" expanded="true" signature="5276:5350" placeholder="{...}" />
+            <marker date="1330469043000" expanded="true" signature="456:701" placeholder="{...}" />
+            <marker date="1330469043000" expanded="true" signature="600:656" placeholder="{...}" />
+            <marker date="1330469043000" expanded="true" signature="890:4654" placeholder="{...}" />
+            <marker date="1330469043000" expanded="true" signature="5315:5389" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="143" selection-start="143" selection-end="143" vertical-scroll-proportion="-0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js1k.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="41" selection-start="3859" selection-end="3859" vertical-scroll-proportion="0.50980395">
+        <state line="73" column="53" selection-start="3038" selection-end="3038" vertical-scroll-proportion="0.18096724">
           <folding />
         </state>
       </provider>
