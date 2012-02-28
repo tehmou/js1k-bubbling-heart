@@ -2,7 +2,6 @@
     var SKEW_GRID_TO_PIXEL_3D = -1/6;
 
     var GRADIENTS_3D = [[1,1,0],[-1,1,0],[1,-1,0],[-1,-1,0],[1,0,1],[-1,0,1],[1,0,-1],[-1,0,-1],[0,1,1],[0,-1,1],[0,1,-1],[0,-1,-1]];
-    var NUM_GRADIENTS_3D = GRADIENTS_3D.length;
 
     var randomKernel = [];
     for(var i = 0; i < 512; i++) {
@@ -87,15 +86,11 @@
                     var ii = tileOrigin[0] % 255;
                     var jj = tileOrigin[1] % 255;
                     var kk = tileOrigin[2] % 255;
-                    var index0 = randomKernel[ii+randomKernel[jj+randomKernel[kk]]] % 12;
-                    var index1 = randomKernel[ii+triangleFactor[0][0]+randomKernel[jj+triangleFactor[0][1]+randomKernel[kk+triangleFactor[0][2]]]] % 12;
-                    var index2 = randomKernel[ii+triangleFactor[1][0]+randomKernel[jj+triangleFactor[1][1]+randomKernel[kk+triangleFactor[1][2]]]] % 12;
-                    var index3 = randomKernel[ii+1+randomKernel[jj+1+randomKernel[kk+1]]] % 12;
                     var cornerGradients = [
-                        GRADIENTS_3D[index0 % NUM_GRADIENTS_3D],
-                        GRADIENTS_3D[index1 % NUM_GRADIENTS_3D],
-                        GRADIENTS_3D[index2 % NUM_GRADIENTS_3D],
-                        GRADIENTS_3D[index3 % NUM_GRADIENTS_3D]
+                        GRADIENTS_3D[randomKernel[ii+randomKernel[jj+randomKernel[kk]]] % 12],
+                        GRADIENTS_3D[randomKernel[ii+triangleFactor[0][0]+randomKernel[jj+triangleFactor[0][1]+randomKernel[kk+triangleFactor[0][2]]]] % 12],
+                        GRADIENTS_3D[randomKernel[ii+triangleFactor[1][0]+randomKernel[jj+triangleFactor[1][1]+randomKernel[kk+triangleFactor[1][2]]]] % 12],
+                        GRADIENTS_3D[randomKernel[ii+1+randomKernel[jj+1+randomKernel[kk+1]]] % 12]
                     ];
 
                     var totalMagnitude = 0;
