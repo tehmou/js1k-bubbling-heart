@@ -32,7 +32,9 @@
                 var hd = heartImg.data[idx+3];
                 if (hd) {
 
-                    var xin=(i%w)*.01,yin=(~~(i/w))*.01,zin=time*.02;
+                    var xin=(i%w)*.01,
+                        yin=~~(i/w)*.01,
+                        zin=time*.02;
 
                     var s = (xin+yin+zin) * SKEW_PIXEL_TO_GRID_3D;
                     var tileOriginX = ~~(xin+s);
@@ -141,7 +143,6 @@
                     color = hd*(32.0*totalMagnitude+1)*.7;
                 }
                 imgData[idx] = color;
-                imgData[idx+1] = imgData[idx+2] = 0;
                 imgData[idx+3] = 255;
 
                 
