@@ -30,6 +30,7 @@
                 var idx = (x + y * w) * 4;
                 var hd = heartImg.data[idx+3];
                 if (hd) {
+
                     var xin=x*.01,yin=y*.01,zin=time*.02;
 
                     var s = (xin+yin+zin) * SKEW_PIXEL_TO_GRID_3D;
@@ -38,24 +39,27 @@
                     var tileOriginZ = ~~(zin+s);
 
                     s = (tileOriginX+tileOriginY+tileOriginZ)*SKEW_GRID_TO_PIXEL_3D;
-                    var pixOrigin = [tileOriginX+s, tileOriginY+s, tileOriginZ+s];
+                    var pixOriginX = tileOriginX+s;
+                    var pixOriginY = tileOriginY+s;
+                    var pixOriginZ = tileOriginZ+s;
 
-
-                    var pixDeltaFromOrigin = [xin-pixOrigin[0], yin-pixOrigin[1], zin-pixOrigin[2]];
+                    var pixDeltaFromOriginX = xin-pixOriginX;
+                    var pixDeltaFromOriginY = yin-pixOriginY;
+                    var pixDeltaFromOriginZ = zin-pixOriginZ;
 
                     var triangleFactor;
-                    if (pixDeltaFromOrigin[0]>=pixDeltaFromOrigin[1]) {
-                        if (pixDeltaFromOrigin[1]>=pixDeltaFromOrigin[2]) {
+                    if (pixDeltaFromOriginX>=pixDeltaFromOriginY) {
+                        if (pixDeltaFromOriginY>=pixDeltaFromOriginZ) {
                             triangleFactor = [[1,0,0],[1,1,0]];
-                        } else if (pixDeltaFromOrigin[0]>=pixDeltaFromOrigin[2]) {
+                        } else if (pixDeltaFromOriginX>=pixDeltaFromOriginZ) {
                             triangleFactor = [[1,0,0],[1,0,1]];
                         } else {
                             triangleFactor = [[0,0,1],[1,0,1]];
                         }
                     } else {
-                        if (pixDeltaFromOrigin[1]<pixDeltaFromOrigin[2]) {
+                        if (pixDeltaFromOriginY<pixDeltaFromOriginZ) {
                             triangleFactor = [[0,0,1],[0,1,1]];
-                        } else if (pixDeltaFromOrigin[0]<pixDeltaFromOrigin[2]) {
+                        } else if (pixDeltaFromOriginX<pixDeltaFromOriginZ) {
                             triangleFactor = [[0,1,0],[0,1,1]];
                         } else {
                             triangleFactor = [[0,1,0],[1,1,0]];
@@ -63,21 +67,21 @@
                     }
 
                     var x1 = [
-                        pixDeltaFromOrigin[0] - triangleFactor[0][0] - SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOrigin[1] - triangleFactor[0][1] - SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOrigin[2] - triangleFactor[0][2] - SKEW_GRID_TO_PIXEL_3D
+                        pixDeltaFromOriginX - triangleFactor[0][0] - SKEW_GRID_TO_PIXEL_3D,
+                        pixDeltaFromOriginY - triangleFactor[0][1] - SKEW_GRID_TO_PIXEL_3D,
+                        pixDeltaFromOriginZ - triangleFactor[0][2] - SKEW_GRID_TO_PIXEL_3D
                     ];
 
                     var x2 = [
-                        pixDeltaFromOrigin[0] - triangleFactor[1][0] - 2.0*SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOrigin[1] - triangleFactor[1][1] - 2.0*SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOrigin[2] - triangleFactor[1][2] - 2.0*SKEW_GRID_TO_PIXEL_3D
+                        pixDeltaFromOriginX - triangleFactor[1][0] - 2.0*SKEW_GRID_TO_PIXEL_3D,
+                        pixDeltaFromOriginY - triangleFactor[1][1] - 2.0*SKEW_GRID_TO_PIXEL_3D,
+                        pixDeltaFromOriginZ - triangleFactor[1][2] - 2.0*SKEW_GRID_TO_PIXEL_3D
                     ];
 
                     var x3 = [
-                        pixDeltaFromOrigin[0] - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOrigin[1] - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOrigin[2] - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D
+                        pixDeltaFromOriginX - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D,
+                        pixDeltaFromOriginY - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D,
+                        pixDeltaFromOriginZ - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D
                     ];
 
                     var ii = tileOriginX % 255;
