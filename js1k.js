@@ -71,32 +71,36 @@
                     var jj = tileOriginY % 255;
                     var kk = tileOriginZ % 255;
 
-                    function calculateEffect3D (delta, grad) {
-                        var magnitude = 0.6 - delta[0]*delta[0] - delta[1]*delta[1] - delta[2]*delta[2];
-                        return magnitude < 0 ? 0 : Math.pow(magnitude, 4) * (delta[0]*grad[0] + delta[1]*grad[1] + delta[2]*grad[2]);
+                    function calculateEffect3D (deltaX, deltaY, deltaZ, grad) {
+                        var magnitude = 0.6 - deltaX*deltaX - deltaY*deltaY - deltaZ*deltaZ;
+                        return magnitude < 0 ? 0 : Math.pow(magnitude, 4) * (deltaX*grad[0] + deltaY*grad[1] + deltaZ*grad[2]);
                     }
 
                     var totalMagnitude = 0;
 
-                    totalMagnitude += calculateEffect3D([pixDeltaFromOriginX, pixDeltaFromOriginY, pixDeltaFromOriginZ], GRADIENTS_3D[randomKernel[ii+randomKernel[jj+randomKernel[kk]]] % 12]);
+                    totalMagnitude += calculateEffect3D(
+                        pixDeltaFromOriginX,
+                        pixDeltaFromOriginY,
+                        pixDeltaFromOriginZ
+                    , GRADIENTS_3D[randomKernel[ii+randomKernel[jj+randomKernel[kk]]] % 12]);
 
-                    totalMagnitude += calculateEffect3D([
+                    totalMagnitude += calculateEffect3D(
                         pixDeltaFromOriginX - triangleFactorA[0] - SKEW_GRID_TO_PIXEL_3D,
                         pixDeltaFromOriginY - triangleFactorA[1] - SKEW_GRID_TO_PIXEL_3D,
                         pixDeltaFromOriginZ - triangleFactorA[2] - SKEW_GRID_TO_PIXEL_3D
-                    ], GRADIENTS_3D[randomKernel[ii+triangleFactorA[0]+randomKernel[jj+triangleFactorA[1]+randomKernel[kk+triangleFactorA[2]]]] % 12]);
+                    , GRADIENTS_3D[randomKernel[ii+triangleFactorA[0]+randomKernel[jj+triangleFactorA[1]+randomKernel[kk+triangleFactorA[2]]]] % 12]);
 
-                    totalMagnitude += calculateEffect3D([
+                    totalMagnitude += calculateEffect3D(
                         pixDeltaFromOriginX - triangleFactorB[0] - 2.0*SKEW_GRID_TO_PIXEL_3D,
                         pixDeltaFromOriginY - triangleFactorB[1] - 2.0*SKEW_GRID_TO_PIXEL_3D,
                         pixDeltaFromOriginZ - triangleFactorB[2] - 2.0*SKEW_GRID_TO_PIXEL_3D
-                    ], GRADIENTS_3D[randomKernel[ii+triangleFactorB[0]+randomKernel[jj+triangleFactorB[1]+randomKernel[kk+triangleFactorB[2]]]] % 12]);
+                    , GRADIENTS_3D[randomKernel[ii+triangleFactorB[0]+randomKernel[jj+triangleFactorB[1]+randomKernel[kk+triangleFactorB[2]]]] % 12]);
 
-                    totalMagnitude += calculateEffect3D([
+                    totalMagnitude += calculateEffect3D(
                         pixDeltaFromOriginX - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D,
                         pixDeltaFromOriginY - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D,
                         pixDeltaFromOriginZ - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D
-                    ], GRADIENTS_3D[randomKernel[ii+1+randomKernel[jj+1+randomKernel[kk+1]]] % 12]);
+                    , GRADIENTS_3D[randomKernel[ii+1+randomKernel[jj+1+randomKernel[kk+1]]] % 12]);
 
                     var color = hd*(32.0*totalMagnitude+1)*.7;
                 }
