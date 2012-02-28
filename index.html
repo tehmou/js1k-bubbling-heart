@@ -27,14 +27,17 @@
     var w = c.width = window.innerWidth,
         h = c.height = window.innerHeight,
         img = a.createImageData(w, h),
+        imgData = img.data,
         heartImg,
-        time = 0;
+        time = 0,
+        color;
 
-    a.font = "400px Arial";
+    a.font = "400px A";
     a.fillText("♥", w/2-150, h/2+150);
     heartImg = a.getImageData(0, 0, w, h);
 
-    function draw () {
+
+    setInterval(function () {
         for (var x = 0; x < w; x++) {
             for (var y = 0; y < h; y++) {
                 var idx = (x + y * w) * 4;
@@ -126,40 +129,38 @@
                     totalMagnitude += calculateEffect3D(
                         pixDeltaFromOriginX,
                         pixDeltaFromOriginY,
-                        pixDeltaFromOriginZ
-                    , GRADIENTS_3D[randomKernel[ii+randomKernel[jj+randomKernel[kk]]] % 12]);
+                        pixDeltaFromOriginZ,
+                        GRADIENTS_3D[randomKernel[ii+randomKernel[jj+randomKernel[kk]]] % 12]);
 
                     totalMagnitude += calculateEffect3D(
                         pixDeltaFromOriginX - triangleFactorAX - SKEW_GRID_TO_PIXEL_3D,
                         pixDeltaFromOriginY - triangleFactorAY - SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOriginZ - triangleFactorAZ - SKEW_GRID_TO_PIXEL_3D
-                    , GRADIENTS_3D[randomKernel[ii+triangleFactorAX+randomKernel[jj+triangleFactorAY+randomKernel[kk+triangleFactorAZ]]] % 12]);
+                        pixDeltaFromOriginZ - triangleFactorAZ - SKEW_GRID_TO_PIXEL_3D,
+                        GRADIENTS_3D[randomKernel[ii+triangleFactorAX+randomKernel[jj+triangleFactorAY+randomKernel[kk+triangleFactorAZ]]] % 12]);
 
                     totalMagnitude += calculateEffect3D(
                         pixDeltaFromOriginX - triangleFactorBX - 2.0*SKEW_GRID_TO_PIXEL_3D,
                         pixDeltaFromOriginY - triangleFactorBY - 2.0*SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOriginZ - triangleFactorBZ - 2.0*SKEW_GRID_TO_PIXEL_3D
-                    , GRADIENTS_3D[randomKernel[ii+triangleFactorBX+randomKernel[jj+triangleFactorBY+randomKernel[kk+triangleFactorBZ]]] % 12]);
+                        pixDeltaFromOriginZ - triangleFactorBZ - 2.0*SKEW_GRID_TO_PIXEL_3D,
+                        GRADIENTS_3D[randomKernel[ii+triangleFactorBX+randomKernel[jj+triangleFactorBY+randomKernel[kk+triangleFactorBZ]]] % 12]);
 
                     totalMagnitude += calculateEffect3D(
                         pixDeltaFromOriginX - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D,
                         pixDeltaFromOriginY - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D,
-                        pixDeltaFromOriginZ - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D
-                    , GRADIENTS_3D[randomKernel[ii+1+randomKernel[jj+1+randomKernel[kk+1]]] % 12]);
+                        pixDeltaFromOriginZ - 1.0 - 3.0*SKEW_GRID_TO_PIXEL_3D,
+                        GRADIENTS_3D[randomKernel[ii+1+randomKernel[jj+1+randomKernel[kk+1]]] % 12]);
 
-                    var color = hd*(32.0*totalMagnitude+1)*.7;
+                    color = hd*(32.0*totalMagnitude+1)*.7;
                 }
-                img.data[idx] = color;
-                img.data[idx+1] = img.data[idx+2] = 0;
-                img.data[idx+3] = 255;
+                imgData[idx] = color;
+                imgData[idx+1] = imgData[idx+2] = 0;
+                imgData[idx+3] = 255;
             }
         }
         a.putImageData(img, 0, 0);
         time++;
-        setTimeout(draw, 0);
-    }
+    }, 0);
 
-    draw();
 </script>
 </body>
 </html>
