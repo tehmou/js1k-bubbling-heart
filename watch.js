@@ -6,7 +6,7 @@ function changed () {
     var js = ""+fs.readFileSync("js1k.js");
     var outputJS = ""+fs.readFileSync("out.js");
 
-    fs.writeFileSync("index.html", index.replace("${CONTENT}", js));
+    fs.writeFileSync("index_test.html", index.replace("${CONTENT}", js));
     //fs.writeFileSync("index_out.html", index.replace("${CONTENT}", outputJS));
     //spawn('open', ['index.html']);
 }

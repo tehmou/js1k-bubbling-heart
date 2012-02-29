@@ -23,10 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="js1k.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="js1k.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js1k.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="45" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.7956318">
+            <state line="16" column="17" selection-start="433" selection-end="434" vertical-scroll-proportion="-7.923077">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.44323483">
               <folding />
             </state>
           </provider>
@@ -53,16 +62,16 @@
       <file leaf-file-name="out.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/out.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="215" selection-start="0" selection-end="1019" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="index_test.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="0" selection-start="5670" selection-end="5670" vertical-scroll-proportion="-88.75">
+            <state line="142" column="0" selection-start="5670" selection-end="5670" vertical-scroll-proportion="-73.125">
               <folding />
             </state>
           </provider>
@@ -80,7 +89,7 @@
       <file leaf-file-name="watch.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/watch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="6" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
+            <state line="8" column="32" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -101,10 +110,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/out.js" />
-        <option value="$PROJECT_DIR$/watch.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js1k.js" />
+        <option value="$PROJECT_DIR$/index_out.html" />
+        <option value="$PROJECT_DIR$/out.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/watch.js" />
       </list>
     </option>
   </component>
@@ -288,13 +298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/watch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="6" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_out.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -309,23 +312,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js1k.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="17" selection-start="433" selection-end="434" vertical-scroll-proportion="-7.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/out.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+        <state line="0" column="215" selection-start="0" selection-end="1019" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="0" selection-start="5670" selection-end="5670" vertical-scroll-proportion="-73.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/watch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="32" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="0" selection-start="5670" selection-end="5670" vertical-scroll-proportion="-88.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js1k.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="45" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.7956318">
+        <state line="19" column="0" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.44323483">
           <folding />
         </state>
       </provider>
