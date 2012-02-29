@@ -52,13 +52,10 @@
                 var tileOriginZ = ~~(zin+s);
 
                 s = (tileOriginX+tileOriginY+tileOriginZ)*SKEW_GRID_TO_PIXEL_3D;
-                var pixOriginX = tileOriginX+s;
-                var pixOriginY = tileOriginY+s;
-                var pixOriginZ = tileOriginZ+s;
 
-                var pixDeltaFromOriginX = xin-pixOriginX;
-                var pixDeltaFromOriginY = yin-pixOriginY;
-                var pixDeltaFromOriginZ = zin-pixOriginZ;
+                var pixDeltaFromOriginX = xin-tileOriginX-s;
+                var pixDeltaFromOriginY = yin-tileOriginY-s;
+                var pixDeltaFromOriginZ = zin-tileOriginZ-s;
 
                 var triangleFactorAX,
                     triangleFactorAY,
@@ -154,7 +151,6 @@
             }
             imgData[idx] = color;
             imgData[idx+3] = 255;
-
 
         }
 
