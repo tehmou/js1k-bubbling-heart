@@ -5,9 +5,8 @@
 
     var randomKernel = [];
 
-    c.style.cssText = "position:absolute;left:0;top:0";
-    var w = c.width = window.innerWidth,
-        h = c.height = window.innerHeight,
+    var w = c.width = window.innerWidth-20,
+        h = c.height = window.innerHeight-20,
         img = a.createImageData(w, h),
         imgData = img.data,
         heartImg,
@@ -19,28 +18,27 @@
     heartImg = a.getImageData(0, 0, w, h);
 
 
-    setInterval(function (i, idx, hd, xin, yin, zin) {
-        for (i = 0; i < w*h; i++) {
+    setInterval(function () {
+        for (var i = 0; i < w*h; i++) {
 
             randomKernel[i%96] = randomKernel[i%96] || ~~(Math.random()*48);
 
-            idx = i * 4;
+            var idx = i * 4, hd;
             if (hd = heartImg.data[idx+3]) {
 
-                xin=(i%w)*.01,
-                yin=~~(i/w)*.01,
-                zin=time;
+                var xin=(i%w)*.01;
+                var yin=~~(i/w)*.01;
 
-                var s = (xin+yin+zin) * SKEW_PIXEL_TO_GRID_3D;
+                var s = (xin+yin+time) * SKEW_PIXEL_TO_GRID_3D;
                 var tileOriginX = ~~(xin+s);
                 var tileOriginY = ~~(yin+s);
-                var tileOriginZ = ~~(zin+s);
+                var tileOriginZ = ~~(time+s);
 
                 s = (tileOriginX+tileOriginY+tileOriginZ)*SKEW_GRID_TO_PIXEL_3D;
 
                 var pixDeltaFromOriginX = xin-tileOriginX-s;
                 var pixDeltaFromOriginY = yin-tileOriginY-s;
-                var pixDeltaFromOriginZ = zin-tileOriginZ-s;
+                var pixDeltaFromOriginZ = time-tileOriginZ-s;
 
                 var triangleFactorAX,
                     triangleFactorAY,

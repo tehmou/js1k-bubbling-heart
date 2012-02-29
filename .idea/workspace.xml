@@ -26,7 +26,16 @@
       <file leaf-file-name="js1k.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js1k.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1163" selection-end="1163" vertical-scroll-proportion="-1.2932917">
+            <state line="34" column="45" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.7956318">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="js1k_huono.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js1k_huono.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="112" column="42" selection-start="4349" selection-end="4349" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -44,7 +53,7 @@
       <file leaf-file-name="out.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/out.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -53,12 +62,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="0" selection-start="6140" selection-end="6140" vertical-scroll-proportion="-78.125">
-              <folding>
-                <marker date="1330473654000" expanded="true" signature="285:535" placeholder="{...}" />
-                <marker date="1330473654000" expanded="true" signature="464:538" placeholder="{...}" />
-                <marker date="1330473654000" expanded="true" signature="4662:5053" placeholder="{...}" />
-              </folding>
+            <state line="142" column="0" selection-start="5670" selection-end="5670" vertical-scroll-proportion="-88.75">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,6 +160,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -285,17 +295,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="0" selection-start="6140" selection-end="6140" vertical-scroll-proportion="-78.125">
-          <folding>
-            <marker date="1330473654000" expanded="true" signature="285:535" placeholder="{...}" />
-            <marker date="1330473654000" expanded="true" signature="464:538" placeholder="{...}" />
-            <marker date="1330473654000" expanded="true" signature="4662:5053" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_out.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -303,16 +302,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js1k_huono.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="42" selection-start="4349" selection-end="4349" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/out.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="0" selection-start="5670" selection-end="5670" vertical-scroll-proportion="-88.75">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js1k.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1163" selection-end="1163" vertical-scroll-proportion="-1.2932917">
+        <state line="34" column="45" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.7956318">
           <folding />
         </state>
       </provider>
